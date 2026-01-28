@@ -1,6 +1,6 @@
 # www.charliehapersucks.com
 
-## Two and half men
+## Two and half men Season 4, Episode 16
 
 Un ejercicio de "arqueología web" que trae de vuelta era del Esqueuomorfismo (Skeuomorphism) y los diseños maquetados con <tables>, típicos de finales de los 90 y principios de los 2000. Botones con gradientes exagerados para parecer 3D, fuentes de alto impacto y colores saturados.
 
