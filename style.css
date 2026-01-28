@@ -1,0 +1,172 @@
+/* Variables Globales */
+:root {
+  --bg-color: #4b0d1c;
+  --header-bg: #b01919;
+  --border-dark: #2a050d;
+  --btn-start: #59a5ff;
+  --btn-end: #0044cc;
+  --btn-border-light: #89cff0;
+  --btn-border-shadow: #003366;
+  --text-color: #000080;
+}
+
+/* RESET Y FONDO */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: var(--bg-color) !important;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+}
+
+/* --- HEADER --- */
+.site-header {
+  background-color: var(--bg-color);
+  padding-top: 30px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #3d0b17;
+  position: relative;
+  z-index: 10;
+}
+
+.main-title {
+  font-family: "Impact", "Arial Black", sans-serif;
+
+  /* CAMBIO: Aumentado a 8.5rem para llenar el ancho del container */
+  font-size: 8.5rem;
+
+  text-transform: uppercase;
+  color: #000;
+  text-align: center;
+  letter-spacing: 1px; /* Ligero ajuste para estirar */
+  line-height: 0.9; /* Más compacto verticalmente */
+  margin-bottom: 0;
+  width: 100%;
+}
+
+/* --- BARRA DE FUEGO --- */
+.flame-bar {
+  height: 70px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-bottom: none;
+  margin-bottom: 0;
+  background-color: #000;
+}
+
+.flame-bar::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background-image: url("https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExanI2ZmxlaWZyZTdxa3FpOG9uYTN6ZGoxczdoaG9yMjA4d2J2aTBmciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13mwsrXEUtSyZi/giphy.gif");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* --- BOTONES RETRO --- */
+.btn-retro {
+  width: 85%;
+  margin: 0 auto 20px auto;
+  background: linear-gradient(
+    to bottom,
+    var(--btn-start) 0%,
+    var(--btn-end) 100%
+  );
+  border: 2px solid var(--btn-border-shadow);
+  border-top-color: var(--btn-border-light);
+  border-left-color: var(--btn-border-light);
+  border-right-color: var(--btn-border-shadow);
+  border-bottom-color: var(--btn-border-shadow);
+  color: var(--text-color);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px 5px;
+  font-size: 1.5rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+  border-radius: 0;
+  text-decoration: none;
+  line-height: 1.1;
+  transition:
+    transform 0.05s,
+    border-color 0.05s;
+}
+
+.btn-retro:hover {
+  background: linear-gradient(to bottom, #7bbaff 0%, #1a66ff 100%);
+  color: #000040;
+  cursor: pointer;
+}
+
+.btn-retro:active {
+  border-top-color: var(--btn-border-shadow);
+  border-left-color: var(--btn-border-shadow);
+  border-right-color: var(--btn-border-light);
+  border-bottom-color: var(--btn-border-light);
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* --- MARCO FOTO --- */
+.charlie-frame {
+  background-color: #000;
+  padding: 8px;
+  box-shadow: none;
+  max-width: 100%;
+  display: inline-block;
+}
+
+.charlie-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  border: none;
+}
+
+/* --- FOOTER --- */
+.site-footer {
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* --- RESPONSIVE / MEDIA QUERIES --- */
+
+/* Ajuste intermedio para laptops (evita que el titulo gigante se rompa) */
+@media (max-width: 1200px) {
+  .main-title {
+    font-size: 6.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn-retro {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-title {
+    font-size: 3.2rem;
+  }
+
+  .btn-retro {
+    width: 90%;
+    font-size: 1.1rem;
+    padding: 20px 5px;
+  }
+}
